@@ -9,11 +9,14 @@ public class PrinterTest {
 
     @Before
     public void before() {
-        printer = new Printer();
+        printer = new Printer(50);
     }
 
     @Test
     public void canPrint() {
-        assertEquals(100, printer.print(100, 10));
+        printer.print(4, 2);
+        assertEquals(42, printer.getSheetsLeft());
     }
+
+    
 }
